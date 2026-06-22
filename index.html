@@ -1,200 +1,252 @@
+```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio de Concepção e Validação de Produtos - Gabriela Vieira dos Santos</title>
-    <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        
-        body { 
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
-            background-color: #f5f5f5; 
-            color: #333333; 
-            line-height: 1.6; 
-            padding-bottom: 60px;
-        }
-        
-        header {
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            color: #212529; 
-            padding: 50px 20px;
-            text-align: center;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.03); 
-        }
-        
-        header h1 {
-            font-size: 2rem;
-            font-weight: 700;
-            letter-spacing: -0.5px;
-            margin-bottom: 12px;
-            color: #212529;
-        }
-        
-        header a.profile-link {
-            font-size: 1.15rem;
-            color: #212529; 
-            text-decoration: underline; 
-            text-underline-offset: 4px;
-            font-weight: 600;
-            transition: color 0.2s, opacity 0.2s;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-        }
-        
-        header a.profile-link:hover {
-            color: #495057; 
-            opacity: 0.9;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfólio de Concepção e Validação de Produtos — Gabriela Vieira dos Santos</title>
 
-        .main-container {
-            max-width: 1000px;
-            margin: 40px auto 0 auto;
-            padding: 0 20px;
-        }
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-        .project-card {
-            background: #ffffff;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03); 
-            border: 1px solid #dee2e6; 
-            padding: 40px;
-            margin-bottom: 40px;
-        }
-        
-        .project-title {
-            font-size: 1.5rem;
-            color: #212529; 
-            margin-bottom: 15px;
-            font-weight: 700;
-        }
-        
-        .badge-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-bottom: 25px;
-        }
-        
-        .badge {
-            background-color: #f8f9fa; 
-            color: #495057; 
-            font-size: 0.75rem;
-            font-weight: 600;
-            padding: 6px 12px;
-            border-radius: 20px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            border: 1px solid #dee2e6;
-        }
-        
-        .badge.highlight {
-            background-color: #e9ecef; 
-            color: #212529; 
-            border: 1px solid #ced4da;
-        }
+:root{
+    --background:#f7f7f8;
+    --surface:#ffffff;
+    --border:#e5e7eb;
+    --text:#18181b;
+    --muted:#6b7280;
+    --badge:#f3f4f6;
+    --link:#2563eb;
+    --button:#18181b;
+    --button-hover:#27272a;
+}
 
-        .action-button {
-            display: inline-flex;
-            align-items: center;
-            background-color: #212529; 
-            color: #ffffff;
-            padding: 12px 24px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: background-color 0.2s;
-            margin-bottom: 25px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-        }
-        
-        .action-button:hover {
-            background-color: #495057; 
-        }
+body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    background:var(--background);
+    color:var(--text);
+    line-height:1.7;
+}
 
-        .media-viewer {
-            background-color: #f8f9fa; 
-            border-radius: 8px;
-            border: 1px solid #dee2e6;
-            padding: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
-        }
-        
-        .project-img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 4px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-        }
+header{
+    background:#ffffff;
+    border-bottom:1px solid var(--border);
+    padding:64px 24px;
+    text-align:center;
+}
 
-        .mobile-wrapper {
-            display: inline-block;
-            margin: 0 auto;
-        }
-        
-        .mobile-wrapper iframe {
-            border: 1px solid #dee2e6; 
-            border-radius: 12px;
-            display: block;
-            background-color: transparent;
-        }
-        
-        .center-wrapper {
-            text-align: center;
-        }
-    </style>
+header h1{
+    font-size:2rem;
+    font-weight:700;
+    letter-spacing:-0.03em;
+    margin-bottom:14px;
+}
+
+.profile-link{
+    color:var(--link);
+    text-decoration:none;
+    font-size:1rem;
+    font-weight:500;
+    transition:opacity .2s ease;
+}
+
+.profile-link:hover{
+    opacity:.7;
+}
+
+.main-container{
+    max-width:1040px;
+    margin:56px auto;
+    padding:0 24px;
+}
+
+.project-card{
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:16px;
+    padding:40px;
+    margin-bottom:36px;
+}
+
+.project-title{
+    font-size:1.55rem;
+    font-weight:700;
+    margin-bottom:20px;
+    color:var(--text);
+}
+
+.badge-container{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-bottom:28px;
+}
+
+.badge{
+    background:var(--badge);
+    color:var(--muted);
+    padding:7px 14px;
+    border-radius:999px;
+    font-size:.75rem;
+    font-weight:600;
+    letter-spacing:.04em;
+    text-transform:uppercase;
+}
+
+.action-button{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:14px 22px;
+    border-radius:8px;
+    background:var(--button);
+    color:#ffffff;
+    text-decoration:none;
+    font-weight:600;
+    transition:background .2s ease;
+    margin-bottom:28px;
+}
+
+.action-button:hover{
+    background:var(--button-hover);
+}
+
+.media-viewer{
+    background:#fafafa;
+    border:1px solid var(--border);
+    border-radius:12px;
+    padding:24px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+}
+
+.project-img{
+    width:100%;
+    max-width:100%;
+    border-radius:8px;
+    display:block;
+}
+
+.center-wrapper{
+    text-align:center;
+}
+
+.mobile-wrapper{
+    display:inline-block;
+}
+
+.mobile-wrapper iframe{
+    width:390px;
+    height:844px;
+    border:1px solid var(--border);
+    border-radius:20px;
+    background:#ffffff;
+}
+
+@media (max-width:768px){
+
+    header{
+        padding:48px 24px;
+    }
+
+    header h1{
+        font-size:1.7rem;
+    }
+
+    .project-card{
+        padding:28px;
+    }
+
+    .project-title{
+        font-size:1.3rem;
+    }
+
+    .mobile-wrapper iframe{
+        width:100%;
+        max-width:390px;
+        height:700px;
+    }
+
+}
+</style>
 </head>
+
 <body>
 
-    <header>
-        <h1>Portfólio de Concepção e Validação de Produtos</h1>
-        <a href="https://gabiiis.github.io/cv/" target="_blank" class="profile-link">
-            🔗 Gabriela Vieira dos Santos
-        </a>
-    </header>
+<header>
+    <h1>Portfólio de Concepção e Validação de Produtos</h1>
 
-    <div class="main-container">
+    <a
+        href="https://gabiiis.github.io/cv/"
+        target="_blank"
+        class="profile-link">
+        Gabriela Vieira dos Santos
+    </a>
+</header>
 
-        <section class="project-card">
-            <h2 class="project-title">📋 Modelo 1: Dashboard Personalizado — Planner da Reforma Tributária do Consumo do Brasil</h2>
-            
-            <div class="badge-container">
-                <span class="badge highlight">Concepção de Produto</span>
-                <span class="badge">Regras de Negócio</span>
-                <span class="badge">UX / UI</span>
-                <span class="badge">B2B / Fiscal</span>
-            </div>
+<main class="main-container">
 
-            <div class="media-viewer">
-                <img src="plannertaxreform.png" alt="Interface do Planner da Reforma Tributária" class="project-img">
-            </div>
-        </section>
+<section class="project-card">
 
-        <section class="project-card">
-            <h2 class="project-title">📱 Modelo 2: Aplicativo Consulta Fácil</h2>
-            
-            <div class="badge-container">
-                <span class="badge highlight">Validação Quantitativa</span>
-                <span class="badge">Arquitetura de Informação</span>
-                <span class="badge">Análise de Dados</span>
-                <span class="badge">Mobile / B2C</span>
-            </div>
+    <h2 class="project-title">
+        📋 Dashboard Personalizado — Planner da Reforma Tributária do Consumo do Brasil
+    </h2>
 
-            <a href="https://t.maze.co/390932137" target="_blank" class="action-button">📊 Acessar Teste de Usabilidade no Maze</a>
-
-            <div class="media-viewer center-wrapper">
-                <div class="mobile-wrapper">
-                    <iframe width="390" height="844" src="https://embed.figma.com/proto/pKhSREUkTy6Xe5oRQtvDjh/consulta-f%C3%A1cil?node-id=8-2&starting-point-node-id=8%3A2&embed-host=share" allowfullscreen></iframe>
-                </div>
-            </div>
-        </section>
-
+    <div class="badge-container">
+        <span class="badge">Concepção de Produto</span>
+        <span class="badge">Regras de Negócio</span>
+        <span class="badge">UX/UI</span>
+        <span class="badge">B2B Fiscal</span>
     </div>
+
+    <div class="media-viewer">
+        <img
+            src="plannertaxreform.png"
+            alt="Planner da Reforma Tributária"
+            class="project-img">
+    </div>
+
+</section>
+
+<section class="project-card">
+
+    <h2 class="project-title">
+        📱 Aplicativo Consulta Fácil
+    </h2>
+
+    <div class="badge-container">
+        <span class="badge">Validação Quantitativa</span>
+        <span class="badge">Arquitetura da Informação</span>
+        <span class="badge">Análise de Dados</span>
+        <span class="badge">Mobile B2C</span>
+    </div>
+
+    <a
+        href="https://t.maze.co/390932137"
+        target="_blank"
+        class="action-button">
+        Acessar teste de usabilidade
+    </a>
+
+    <div class="media-viewer center-wrapper">
+        <div class="mobile-wrapper">
+            <iframe
+                src="https://embed.figma.com/proto/pKhSREUkTy6Xe5oRQtvDjh/consulta-f%C3%A1cil?node-id=8-2&starting-point-node-id=8%3A2&embed-host=share"
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+
+</section>
+
+</main>
 
 </body>
 </html>
+```
