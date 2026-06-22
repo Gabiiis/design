@@ -1,185 +1,456 @@
+```html
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portfólio de Concepção e Validação de Produtos — Gabriela Vieira dos Santos</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Gabriela Vieira dos Santos | Portfólio</title>
 
 <style>
+
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
 :root{
-    --background:#F5F2EC;
-    --surface:#F9F7F3;
-    --border:#DDD5C8;
-    --text:#232323;
-    --muted:#6A665F;
-    --accent:#55614F;
-    --accent-hover:#445046;
+
+--bg:#F4F1EB;
+--surface:#F8F6F2;
+--border:#DDD7CF;
+
+--text:#202020;
+--muted:#6A6761;
+
+--primary:#47584A;
+--primary-hover:#39463C;
+
+}
+
+html{
+scroll-behavior:smooth;
 }
 
 body{
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-    background:var(--background);
-    color:var(--text);
-    line-height:1.7;
-    -webkit-font-smoothing:antialiased;
+
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+background:var(--bg);
+color:var(--text);
+line-height:1.75;
+-webkit-font-smoothing:antialiased;
+
+}
+
+a{
+color:inherit;
 }
 
 header{
-    background:linear-gradient(135deg,#DDD5C7 0%,#CFC6B8 100%);
-    padding:88px 32px;
-    border-bottom:1px solid #C9C0B3;
+
+background:
+radial-gradient(circle at top right,rgba(255,255,255,.45),transparent 40%),
+linear-gradient(135deg,#DCD3C5,#CDC3B5);
+
+border-bottom:1px solid #CFC6B9;
+
 }
 
 .hero{
-    max-width:1100px;
-    margin:auto;
+
+max-width:1160px;
+margin:auto;
+padding:96px 40px;
+
+}
+
+.hero span{
+
+display:inline-block;
+
+padding:8px 16px;
+
+border:1px solid rgba(0,0,0,.08);
+
+border-radius:999px;
+
+background:rgba(255,255,255,.35);
+
+font-size:.75rem;
+
+letter-spacing:.08em;
+
+text-transform:uppercase;
+
+font-weight:600;
+
+color:#5F5A54;
+
+margin-bottom:26px;
+
 }
 
 .hero h1{
-    font-size:3rem;
-    font-weight:700;
-    line-height:1.15;
-    letter-spacing:-0.04em;
-    max-width:760px;
+
+font-size:3.7rem;
+
+font-weight:700;
+
+letter-spacing:-.05em;
+
+line-height:1.05;
+
+max-width:1050px;
+
 }
 
 .hero p{
-    margin-top:22px;
-    font-size:1.1rem;
-    color:var(--muted);
-    max-width:650px;
+
+margin-top:28px;
+
+max-width:760px;
+
+font-size:1.1rem;
+
+color:var(--muted);
+
 }
 
-.profile-link{
-    display:inline-block;
-    margin-top:34px;
-    color:var(--accent);
-    text-decoration:none;
-    font-weight:600;
-    transition:.2s;
+.profile{
+
+display:inline-flex;
+
+align-items:center;
+
+gap:10px;
+
+margin-top:42px;
+
+font-weight:600;
+
+color:var(--primary);
+
+text-decoration:none;
+
+padding-bottom:2px;
+
+border-bottom:1px solid currentColor;
+
+transition:.2s;
+
 }
 
-.profile-link:hover{
-    opacity:.75;
+.profile:hover{
+
+gap:16px;
+
+color:var(--primary-hover);
+
 }
 
 main{
-    max-width:1100px;
-    margin:72px auto;
-    padding:0 32px;
+
+max-width:1160px;
+
+margin:auto;
+
+padding:80px 40px 120px;
+
 }
 
 .project{
-    padding:72px 0;
-    border-top:1px solid var(--border);
+
+padding:72px 0;
+
+border-top:1px solid var(--border);
+
 }
 
 .project:first-child{
-    border-top:none;
-    padding-top:0;
+
+border:none;
+
+padding-top:0;
+
+}
+
+.project-header{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:flex-start;
+
+gap:40px;
+
+margin-bottom:26px;
+
 }
 
 .project h2{
-    font-size:2rem;
-    font-weight:700;
-    letter-spacing:-0.03em;
-    margin-bottom:18px;
+
+font-size:2rem;
+
+font-weight:700;
+
+letter-spacing:-.03em;
+
+max-width:720px;
+
 }
 
 .badges{
-    display:flex;
-    flex-wrap:wrap;
-    gap:10px;
-    margin-bottom:34px;
+
+display:flex;
+
+flex-wrap:wrap;
+
+gap:10px;
+
+margin-top:20px;
+
 }
 
 .badge{
-    background:#ECE6DE;
-    color:#5F5A54;
-    padding:8px 14px;
-    border-radius:999px;
-    font-size:.74rem;
-    font-weight:600;
-    text-transform:uppercase;
-    letter-spacing:.05em;
+
+background:#EBE5DC;
+
+padding:8px 14px;
+
+border-radius:999px;
+
+font-size:.72rem;
+
+font-weight:600;
+
+letter-spacing:.06em;
+
+text-transform:uppercase;
+
+color:#5F5A54;
+
 }
 
 .button{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    padding:14px 24px;
-    background:var(--accent);
-    color:#fff;
-    text-decoration:none;
-    border-radius:8px;
-    font-weight:600;
-    transition:.2s;
-    margin-bottom:34px;
+
+display:inline-flex;
+
+align-items:center;
+
+justify-content:center;
+
+padding:14px 22px;
+
+background:var(--primary);
+
+border-radius:8px;
+
+text-decoration:none;
+
+color:white;
+
+font-weight:600;
+
+transition:.2s;
+
 }
 
 .button:hover{
-    background:var(--accent-hover);
+
+background:var(--primary-hover);
+
 }
 
-.media{
-    background:var(--surface);
-    border:1px solid var(--border);
-    border-radius:18px;
-    padding:24px;
+.frame{
+
+margin-top:34px;
+
+background:var(--surface);
+
+border:1px solid var(--border);
+
+border-radius:18px;
+
+padding:22px;
+
 }
 
-.media img{
-    display:block;
-    width:100%;
-    border-radius:10px;
+.frame img{
+
+display:block;
+
+width:100%;
+
+border-radius:10px;
+
 }
 
-.mobile{
-    display:flex;
-    justify-content:center;
+.phone{
+
+display:flex;
+
+justify-content:center;
+
 }
 
-.mobile iframe{
-    width:390px;
-    height:844px;
-    border:none;
-    border-radius:24px;
-    overflow:hidden;
+.phone iframe{
+
+width:390px;
+
+height:844px;
+
+border:none;
+
+border-radius:22px;
+
+background:white;
+
+}
+
+.contact{
+
+margin-top:40px;
+
+padding-top:80px;
+
+border-top:1px solid var(--border);
+
+}
+
+.contact h2{
+
+font-size:2rem;
+
+letter-spacing:-.03em;
+
+margin-bottom:18px;
+
+}
+
+.contact p{
+
+color:var(--muted);
+
+max-width:640px;
+
+margin-bottom:48px;
+
+}
+
+.grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+
+gap:36px;
+
+}
+
+.item small{
+
+display:block;
+
+font-size:.75rem;
+
+text-transform:uppercase;
+
+letter-spacing:.08em;
+
+color:var(--muted);
+
+margin-bottom:10px;
+
+}
+
+.item a{
+
+text-decoration:none;
+
+font-weight:600;
+
+transition:.2s;
+
+}
+
+.item a:hover{
+
+color:var(--primary);
+
+}
+
+footer{
+
+margin-top:80px;
+
+padding-top:26px;
+
+border-top:1px solid var(--border);
+
+display:flex;
+
+justify-content:space-between;
+
+flex-wrap:wrap;
+
+gap:20px;
+
+font-size:.92rem;
+
+color:var(--muted);
+
 }
 
 @media(max-width:900px){
 
+.hero{
+
+padding:72px 24px;
+
+}
+
 .hero h1{
-    font-size:2.2rem;
-}
 
-.project h2{
-    font-size:1.5rem;
-}
+font-size:2.5rem;
 
-.mobile iframe{
-    width:100%;
-    max-width:390px;
-    height:700px;
-}
-
-header{
-    padding:64px 28px;
 }
 
 main{
-    padding:0 24px;
+
+padding:60px 24px 80px;
+
+}
+
+.project-header{
+
+display:block;
+
+}
+
+.phone iframe{
+
+width:100%;
+
+max-width:390px;
+
+height:700px;
+
+}
+
+footer{
+
+display:block;
+
 }
 
 }
+
 </style>
+
 </head>
 
 <body>
@@ -188,17 +459,21 @@ main{
 
 <div class="hero">
 
-<h1>Portfólio de Concepção e Validação de Produtos</h1>
+<span>Product • UX • Discovery</span>
+
+<h1>Portfólio de Concepção e Validação de Produtos Digitais</h1>
 
 <p>
-Projetos de descoberta, concepção, validação e evolução de produtos digitais,
-com foco em experiência do usuário, estratégia e tomada de decisão baseada em dados.
+Projetos desenvolvidos com foco em estratégia de produto, descoberta, arquitetura da informação, validação com usuários e construção de soluções digitais orientadas por evidências.
 </p>
 
-<a class="profile-link"
+<a
+class="profile"
 href="https://gabiiis.github.io/cv/"
 target="_blank">
-Gabriela Vieira dos Santos
+
+Ver currículo completo →
+    
 </a>
 
 </div>
@@ -209,42 +484,72 @@ Gabriela Vieira dos Santos
 
 <section class="project">
 
-<h2>📋 Dashboard Personalizado — Planner da Reforma Tributária do Consumo do Brasil</h2>
+<div class="project-header">
+
+<div>
+
+<h2>Dashboard Personalizado — Planner da Reforma Tributária do Consumo do Brasil</h2>
 
 <div class="badges">
-<span class="badge">Concepção de Produto</span>
-<span class="badge">Regras de Negócio</span>
-<span class="badge">UX/UI</span>
-<span class="badge">B2B Fiscal</span>
+
+<div class="badge">Concepção</div>
+
+<div class="badge">UX/UI</div>
+
+<div class="badge">Regras de Negócio</div>
+
+<div class="badge">B2B Fiscal</div>
+
 </div>
 
-<div class="media">
+</div>
+
+</div>
+
+<div class="frame">
+
 <img
 src="plannertaxreform.png"
 alt="Planner da Reforma Tributária">
+
 </div>
 
 </section>
 
 <section class="project">
 
-<h2>📱 Aplicativo Consulta Fácil</h2>
+<div class="project-header">
+
+<div>
+
+<h2>Aplicativo Consulta Fácil</h2>
 
 <div class="badges">
-<span class="badge">Validação Quantitativa</span>
-<span class="badge">Arquitetura da Informação</span>
-<span class="badge">Pesquisa com Usuários</span>
-<span class="badge">Mobile</span>
+
+<div class="badge">Pesquisa</div>
+
+<div class="badge">Validação</div>
+
+<div class="badge">Arquitetura da Informação</div>
+
+<div class="badge">Mobile</div>
+
+</div>
+
 </div>
 
 <a
 class="button"
 href="https://t.maze.co/390932137"
 target="_blank">
-Acessar teste de usabilidade
+
+Abrir teste de usabilidade
+
 </a>
 
-<div class="media mobile">
+</div>
+
+<div class="frame phone">
 
 <iframe
 src="https://embed.figma.com/proto/pKhSREUkTy6Xe5oRQtvDjh/consulta-f%C3%A1cil?node-id=8-2&starting-point-node-id=8%3A2&embed-host=share"
@@ -255,8 +560,75 @@ allowfullscreen>
 
 </section>
 
+<section class="contact">
+
+<h2>Contato</h2>
+
+<p>
+Caso tenha interesse em conversar sobre oportunidades, projetos ou produtos digitais, os canais abaixo estão disponíveis.
+</p>
+
+<div class="grid">
+
+<div class="item">
+
+<small>Currículo</small>
+
+<a
+href="https://gabiiis.github.io/cv/"
+target="_blank">
+
+gabiiis.github.io/cv
+
+</a>
+
+</div>
+
+<div class="item">
+
+<small>E-mail</small>
+
+<a href="mailto:seuemail@email.com">
+
+seuemail@email.com
+
+</a>
+
+</div>
+
+<div class="item">
+
+<small>LinkedIn</small>
+
+<a
+href="https://linkedin.com/in/seuusuario"
+target="_blank">
+
+linkedin.com/in/seuusuario
+
+</a>
+
+</div>
+
+</div>
+
+<footer>
+
+<div>
+Gabriela Vieira dos Santos
+</div>
+
+<div>
+Concepção • Descoberta • Validação de Produtos Digitais
+</div>
+
+</footer>
+
+</section>
+
 </main>
 
 </body>
+
 </html>
 ```
