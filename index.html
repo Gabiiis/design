@@ -1,0 +1,195 @@
+<index html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio de Concepção e Validação de Produtos - Gabriela Vieira dos Santos</title>
+    <style>
+        /* Estilos Globais e Tipografia */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
+            background-color: #f8f9fa; 
+            color: #212529; 
+            line-height: 1.6; 
+            padding-bottom: 60px;
+        }
+        
+        /* Cabeçalho Principal */
+        header {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            color: #ffffff;
+            padding: 50px 20px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+        header h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin-bottom: 8px;
+        }
+        header a.profile-link {
+            font-size: 1.15rem;
+            color: #38bdf8;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        header a.profile-link:hover {
+            color: #7dd3fc;
+            text-decoration: underline;
+        }
+
+        /* Container de Conteúdo */
+        .main-container {
+            max-width: 1000px;
+            margin: 40px auto 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Cards dos Projetos */
+        .project-card {
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+            border: 1px solid #e2e8f0;
+            padding: 40px;
+            margin-bottom: 40px;
+        }
+        .project-title {
+            font-size: 1.5rem;
+            color: #0f172a;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        
+        /* Badges de Categoria */
+        .badge-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 25px;
+        }
+        .badge {
+            background-color: #f1f5f9;
+            color: #475569;
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 6px 12px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .badge.highlight {
+            background-color: #e0f2fe;
+            color: #0369a1;
+        }
+
+        /* Links e Botões de Ação */
+        .action-button {
+            display: inline-flex;
+            align-items: center;
+            background-color: #0f172a;
+            color: #ffffff;
+            padding: 12px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: background-color 0.2s;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .action-button:hover {
+            background-color: #1e293b;
+        }
+
+        /* Visualização de Mídia (Imagens e Iframes) */
+        .media-viewer {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+        
+        /* Responsividade para a Imagem do Planner */
+        .project-img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        /* Moldura de Celular para o App */
+        .mobile-wrapper {
+            background: #1e293b;
+            padding: 12px;
+            border-radius: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            display: inline-block;
+            margin: 0 auto;
+        }
+        .mobile-wrapper iframe {
+            border: none;
+            border-radius: 32px;
+            display: block;
+            background-color: #ffffff;
+        }
+        .center-wrapper {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Portfólio de Concepção e Validação de Produtos</h1>
+        <a href="https://gabiiis.github.io/cv/" target="_blank" class="profile-link">Gabriela Vieira dos Santos</a>
+    </header>
+
+    <div class="main-container">
+
+        <section class="project-card">
+            <h2 class="project-title">📋 Modelo 1: Dashboard Personalizado — Planner da Reforma Tributária do Consumo</h2>
+            
+            <div class="badge-container">
+                <span class="badge highlight">Concepção de Produto</span>
+                <span class="badge">Regras de Negócio</span>
+                <span class="badge">UX / UI</span>
+                <span class="badge">B2B / Fiscal</span>
+            </div>
+
+            <div class="media-viewer">
+                <img src="plannertaxreform.png" alt="Interface do Planner da Reforma Tributária" class="project-img">
+            </div>
+        </section>
+
+
+        <section class="project-card">
+            <h2 class="project-title">📱 Modelo 2: Aplicativo Consulta Fácil</h2>
+            
+            <div class="badge-container">
+                <span class="badge highlight">Validação Quantitativa</span>
+                <span class="badge">Arquitetura de Informação</span>
+                <span class="badge">Análise de Dados</span>
+                <span class="badge">Mobile / B2C</span>
+            </div>
+
+            <a href="https://t.maze.co/390932137" target="_blank" class="action-button">📊 Acessar Teste de Usabilidade no Maze</a>
+
+            <div class="media-viewer center-wrapper">
+                <div class="mobile-wrapper">
+                    <iframe width="390" height="844" src="https://embed.figma.com/proto/pKhSREUkTy6Xe5oRQtvDjh/consulta-f%C3%A1cil?node-id=8-2&starting-point-node-id=8%3A2&embed-host=share" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+</body>
+</html>
